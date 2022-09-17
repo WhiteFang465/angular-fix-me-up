@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { of } from 'rxjs';
 import { Account } from './account';
 
@@ -7,7 +7,7 @@ import { Account } from './account';
   providedIn: 'root'
 })
 export class AccountService {
-
+  public data = new Subject()
    accounts: Account[] = [
     { id: "1234", balance: 7500, currency: "cad" },
     { id: "1235", balance: 4500, currency: "cad" },

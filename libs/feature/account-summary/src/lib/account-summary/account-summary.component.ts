@@ -3,6 +3,7 @@
  * TODO: 13. Angular (NX) Architecture
 */
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Account } from 'libs/shared/services/src/lib/account';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
@@ -16,17 +17,28 @@ import { Observable, of } from 'rxjs';
 })
 export class AccountSummaryComponent implements OnInit {
   accounts$: Observable<Account[]> = of([]);
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService,private router: Router) {}
   accounts: Account[] = [];
   accountsFilter = '';
+
 
   ngOnInit(): void {
     this.accountService.getAccounts().subscribe((accounts) => {
       this.accounts = accounts;
+
     });
   }
 
   filterAccounts(accounts: Account[]) {
     return accounts.filter(acc => acc.currency === this.accountsFilter || this.accountsFilter === '');
   }
+
+  getAccount(id: unknown){
+    this.router.navigateByUrl(`/account/${id}`)
+     this.accountService.data.next(id);
+
+  //    this.accountService.data.subscribe((data) => {
+  //     console.log(data)
+  // })
+}
 }

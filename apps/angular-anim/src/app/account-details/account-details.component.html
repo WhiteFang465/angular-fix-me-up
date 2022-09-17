@@ -1,4 +1,19 @@
 <h1>Account Details</h1>
 
 <p>Account ID</p>
+<table>
+  <tr>
+    <th scope="col">Account Name</th>
+    <th scope="col">Balance</th>
+    <th scope="col">
+      Account Type
+    </th>
+  </tr>
+  <tr *ngFor="let account of account">
+    <th></th>
+    <td>{{account.id}}</td>
+    <td>{{account.balance}}</td>
+    <td>{{account.currency}}</td>
+  </tr>
+</table>
 <!-- TODO: how to retrieve account id and other account details in this route? -->
