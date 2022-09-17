@@ -1,9 +1,11 @@
-/** 
+/**
  * TODO: 10. Asynchronous Programming (RxJS)
  * TODO: 13. Angular (NX) Architecture
 */
 import { Component, OnInit } from '@angular/core';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Account } from 'libs/shared/services/src/lib/account';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { AccountService } from 'libs/shared/services/src/lib/account.service';
 import { Observable, of } from 'rxjs';
 

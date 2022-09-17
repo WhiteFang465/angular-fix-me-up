@@ -1,23 +1,22 @@
 import { AccountSummaryComponent } from '@angular-anim/feature/account-summary';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { flush } from '@angular/core/testing';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 
 // TODO: 2. We've setup these routes and have them on the page but they aren't working
 const routes: Routes = [
-  { path: '', component: AccountSummaryComponent },
+  { path: '', redirectTo: 'accountSummary', pathMatch: 'full' },
+  { path: 'accountSummary', component: AccountSummaryComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'account/:id', component: AccountDetailsComponent }
+  { path: 'account/:id', component: AccountDetailsComponent },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   declarations: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
