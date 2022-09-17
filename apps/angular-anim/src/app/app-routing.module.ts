@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 
-// TODO: 2. We've setup these routes and have them on the page but they aren't working
+// TODO: 2. We've setup these routes and have them on the page but they aren't working (Completed)
 const routes: Routes = [
   { path: '', redirectTo: 'accountSummary', pathMatch: 'full' },
   { path: 'accountSummary', component: AccountSummaryComponent },

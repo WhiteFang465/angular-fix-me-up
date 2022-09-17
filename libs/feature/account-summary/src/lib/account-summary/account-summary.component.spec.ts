@@ -26,16 +26,18 @@ describe('AccountSummaryComponent', () => {
     expect.assertions(2);
     expect(component.accounts$).toBeTruthy();
     component.accounts$.subscribe(acc => {
-      expect(acc.length).toBe(4);
+      expect(acc.length).toBe(3);
     });
   });
 
   describe("#filterAccounts", () => {
     it('should return filter accounts', () => {
       // TODO: 10. this test isn't doing anything atm, how can we make it more meaningful?
-      const accounts: Account[] = [];
-      const filtered = component.filterAccounts(accounts);
-      expect(filtered).toBe([]);
+     
+      const currency : any ="USD"
+      const filteredAcoounts : Account[] = []
+      component.filterAccounts(currency);
+      expect(filteredAcoounts.length).toBe(1);
     });
   });
 });
