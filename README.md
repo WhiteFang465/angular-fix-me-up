@@ -17,3 +17,6 @@ It will also test your knowledge of:
 - testing
 - accessibility
 - semantic elements
+
+
+npx nx serve angular-anim
