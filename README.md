@@ -2,21 +2,20 @@
 
 # AngularFixerUpper
 
-This project was generated using [Nx](https://nx.dev).
+### Project done by Atul Jayant jairam.
 
-## Fixer Upper Scenario
+# How to run the Project.
 
-This project was created over the span of 2 days. A lot of things were rushed and while it is running, it needs a lot of attention and knowledge of Angular, HTML, and CSS.
+Steps to run the project.
 
-It will also test your knowledge of:
+1. Clone the project using `git clone https://github.com/WhiteFang465/angular-fix-me-up.git`.
+2. Run the command `npm install nx --force`
+3. Run the following code to run the application `npx nx serve angular-anim`.
 
-- component architecture
-- data flow
-  - NGRX Data Stores
-- asynchronous programming
-- testing
-- accessibility
-- semantic elements
+# SnapShots
+
+![Home Page](https://user-images.githubusercontent.com/87813463/190929801-650cf061-5e83-424b-8de8-e492943f99df.png)
+
+![Account Details](https://user-images.githubusercontent.com/87813463/190929827-4df331d3-f768-4dd0-a12d-ca9a4f2d14ff.png)
 
 
-npx nx serve angular-anim
